@@ -19,5 +19,8 @@ RUN caravel init
 # Load some data to play with
 RUN caravel load_examples
 
+# expose port
+EXPOSE 8088
+
 # Start the development web server
-CMD caravel runserver -d
+CMD caravel runserver
