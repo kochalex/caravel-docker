@@ -17,4 +17,4 @@ RUN chmod a+x /caravel/start.sh
 EXPOSE 8088
 
 # Start the development web server
-CMD ["/caravel/start.sh"]
+CMD ["caravel","runserver"]
