@@ -1,3 +1,8 @@
-This is a Dockefile to build https://github.com/airbnb/caravel.
+# This is a Dockefile to build caravel
 
-Currently it builds it per the quickstart demo instructions.
+## set environment variables
++ APP_SECRET_KEY
++ MYSQL_USERNAME
++ MYSQL_PASSWORD
++ MYSQL_PORT_3306_TCP_ADDR
++ MYSQL_INSTANCE_NAME
