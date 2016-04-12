@@ -12,7 +12,7 @@ COPY . /caravel/
 WORKDIR /caravel
 
 RUN chmod a+x /caravel/start.sh
-RUN chmod a+x /caravel/init_check.sh
+RUN chmod a+x /caravel/init_check.py
 
 ENV PYTHONPATH  /caravel/
 # expose port
