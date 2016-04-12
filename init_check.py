@@ -1,4 +1,4 @@
-#!/bin/bash python
+#!/usr/local/bin/python
 import os
 import MySQLdb
 
