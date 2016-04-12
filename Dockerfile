@@ -13,6 +13,7 @@ WORKDIR /caravel
 
 RUN chmod a+x /caravel/start.sh
 
+ENV PYTHONPATH = /caravel/
 # expose port
 EXPOSE 8088
 
