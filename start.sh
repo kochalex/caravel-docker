@@ -15,12 +15,17 @@ else
   EMAIL="admin@test.com";
 fi
 
-if [ `./init_check.py` = 1 ];
-then
-  fabmanager create-admin --app caravel --username $USERNAME --firstname $FIRSTNAME --lastname $LASTNAME --email $EMAIL --password $PASSWORD
-  caravel db upgrade
-  caravel init
-  caravel runserver
-else
-  caravel runserver
-fi
+fabmanager create-admin --app caravel --username $USERNAME --firstname $FIRSTNAME --lastname $LASTNAME --email $EMAIL --password $PASSWORD
+caravel db upgrade
+caravel init
+caravel runserver
+
+# if [ `./init_check.py` = 1 ];
+# then
+#   fabmanager create-admin --app caravel --username $USERNAME --firstname $FIRSTNAME --lastname $LASTNAME --email $EMAIL --password $PASSWORD
+#   caravel db upgrade
+#   caravel init
+#   caravel runserver
+# else
+#   caravel runserver
+# fi

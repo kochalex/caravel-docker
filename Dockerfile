@@ -5,6 +5,8 @@ RUN pip install caravel
 
 RUN pip install mysqlclient
 
+RUN pip install psycopg2
+
 RUN mkdir /caravel
 
 COPY . /caravel/
