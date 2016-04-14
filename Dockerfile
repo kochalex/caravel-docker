@@ -20,7 +20,5 @@ ENV PYTHONPATH  /caravel/
 # expose port
 EXPOSE 8088
 
-#test
-RUN cat init_check.py
 # Start the development web server
 CMD ["/caravel/start.sh"]
