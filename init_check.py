@@ -10,7 +10,7 @@ cur.execute("SELECT table_name FROM information_schema.tables WHERE table_schema
 
 res = cur.fetchall()
 
-if(res != [] ):
+if(res == [] ):
   print 1
 else:
   print 0
