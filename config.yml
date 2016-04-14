@@ -1,0 +1,48 @@
+name: caravel
+description: |
+  Caravel is a data exploration platform designed to be visual, intuitive and interactive.
+category: Application
+url: https://github.com/airbnb/caravel
+arguments:
+  - id: caravel_email
+    description: "The Root Email of Caravel"
+    name: "Root Email"
+    type: "string"
+    required: false
+    default: "admin@test.com"
+  - id: caravel_firstname
+    description: "The Root Firstname of Caravel"
+    name: "Root Firstname"
+    type: "string"
+    required: false
+    default: "caravel"
+  - id: caravel_lastname
+    description: "The Root Lastname of Caravel"
+    name: "Root Lastname"
+    type: "string"
+    required: false
+    default: "administrator"
+  - id: caravel_name
+    description: "The Root Username of Caravel"
+    name: "Root Username"
+    type: "string"
+    required: false
+    default: "admin"
+  - id: caravel_password
+    description: "The Root Username of Caravel"
+    name: "Root Password"
+    type: "string"
+    required: false
+    default: "admin"
+  - id: postgresql_password
+    description: "The Root Password of PostgreSQL"
+    name: "Root Password"
+    type: "string"
+    required: true
+    default: "root"
+  - id: postgressql_username
+    description: "The Root Username of PostgreSQL"
+    name: "Root Username"
+    type: "string"
+    required: true
+    default: "caravel"
