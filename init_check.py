@@ -6,7 +6,7 @@ conn = psycopg2.connect(databaseb=os.getenv('POSTGRESQL_ENV_POSTGRES_DB'),user=o
 
 cur = conn.cursor()
 
-cur.execute('select count(*) form ab_user')
+cur.execute('select count(*) from ab_user')
 
 res = cur.fetchall()
 
