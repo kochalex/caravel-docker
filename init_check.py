@@ -6,11 +6,11 @@ conn = psycopg2.connect(databaseb=os.getenv('POSTGRESQL_ENV_POSTGRES_DB'),user=o
 
 cur = conn.cursor()
 
-cur.execute('select count(*) from ab_user')
+cur.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'")
 
 res = cur.fetchall()
 
-if(res != '' ):
+if(res != [] ):
   print 1
 else:
   print 0
