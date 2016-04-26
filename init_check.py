@@ -5,7 +5,7 @@
 import os
 import psycopg2
 
-conn = psycopg2.connect(databaseb=os.getenv('POSTGRESQL_INSTANCE_NAME') or os.getenv('POSTGRESQL_ENV_POSTGRES_DB'),user=os.getenv('POSTGRESQL_USERNAME') or os.getenv('POSTGRESQL_ENV_POSTGRES_USER'),password=os.getenv('POSTGRESQL_PASSWORD') or os.getenv('POSTGRESQL_ENV_POSTGRES_PASSWORD'),host=os.getenv('POSTGRESQL_PORT_5432_TCP_ADDR'),port=int(os.getenv('POSTGRESQL_PORT_5432_TCP_PORT')))
+conn = psycopg2.connect(database=os.getenv('POSTGRESQL_INSTANCE_NAME') or os.getenv('POSTGRESQL_ENV_POSTGRES_DB'),user=os.getenv('POSTGRESQL_USERNAME') or os.getenv('POSTGRESQL_ENV_POSTGRES_USER'),password=os.getenv('POSTGRESQL_PASSWORD') or os.getenv('POSTGRESQL_ENV_POSTGRES_PASSWORD'),host=os.getenv('POSTGRESQL_PORT_5432_TCP_ADDR'),port=int(os.getenv('POSTGRESQL_PORT_5432_TCP_PORT')))
 
 cur = conn.cursor()
 
