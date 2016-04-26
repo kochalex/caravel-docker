@@ -1,3 +1,19 @@
+### This is a Dockerfile of Caravel
+
+#### need to set up this environment variables
++ CARAVEL_USERNAME
++ CARAVEL_PASSWORD
++ CARAVEL_FIRSTNAME
++ CARAVEL_LASTNAME
++ CARAVEL_EMAIL
+
++ POSTGRESQL_ENV_POSTGRES_USER
++ POSTGRESQL_ENV_POSTGRES_PASSWORD
++ POSTGRESQL_ENV_POSTGRES_DB
++ POSTGRESQL_PORT_5432_TCP_ADDR
++ POSTGRESQL_PORT_5432_TCP_PORT
+
+
 Caravel
 =========
 <img src="http://i.imgur.com/H0Kyvyi.jpg" style="border-radius: 20px; box-shadow:5px 5px 5px gray;" alt="Caravel" width="500"/>

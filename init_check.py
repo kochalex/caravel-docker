@@ -1,4 +1,6 @@
 #!/usr/local/bin/python
+# 检查是否已经安装过，如果安装过就不再初始化数据库
+#
 import os
 import psycopg2
 
