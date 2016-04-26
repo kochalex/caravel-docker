@@ -24,11 +24,11 @@ SECRET_KEY = os.getenv('APP_SECRET_KEY','\2\1thisismyscretkey\1\2\e\y\y\h')
 #SQLALCHEMY_DATABASE_URI = 'mysql://'+os.getenv('MYSQL_USERNAME')+':'+os.getenv('MYSQL_PASSWORD')+'@'+os.getenv('MYSQL_PORT_3306_TCP_ADDR')+'/'+os.getenv('MYSQL_INSTANCE_NAME')
 
 SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://%s:%s@%s:%s/%s' % (
-        os.getenv('POSTGRESQL_ENV_POSTGRES_USER','caravel'),
-        os.getenv('POSTGRESQL_ENV_POSTGRES_PASSWORD','caravel'),
+        os.getenv('POSTGRESQL_USERNAME') or os.getenv('POSTGRESQL_ENV_POSTGRES_USER','caravel'),
+        os.getenv('POSTGRESQL_PASSWORD') or os.getenv('POSTGRESQL_ENV_POSTGRES_PASSWORD','caravel'),
         os.getenv('POSTGRESQL_PORT_5432_TCP_ADDR'),
         os.getenv('POSTGRESQL_PORT_5432_TCP_PORT','5432'),
-        os.getenv('POSTGRESQL_ENV_POSTGRES_DB','caravel')
+        os.getenv('POSTGRESQL_INSTANCE_NAME') or os.getenv('POSTGRESQL_ENV_POSTGRES_DB','caravel')
     )
 
 # Flask-WTF flag for CSRF
