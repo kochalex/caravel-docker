@@ -3,21 +3,22 @@ FROM python:2.7.11
 # Install caravel
 RUN pip install caravel
 
-# copy admin password details to /caravel for fabmanager
+RUN pip install mysqlclient
+
+RUN pip install psycopg2
+
 RUN mkdir /caravel
-COPY admin.config /caravel/
 
-# Create an admin user
-RUN /usr/local/bin/fabmanager create-admin --app caravel < /caravel/admin.config
+COPY . /caravel/
 
-# Initialize the database
-RUN caravel db upgrade
+WORKDIR /caravel
 
-# Create default roles and permissions
-RUN caravel init
+RUN chmod a+x /caravel/start.sh
+RUN chmod a+x /caravel/init_check.py
 
-# Load some data to play with
-RUN caravel load_examples
+ENV PYTHONPATH  /caravel/
+# expose port
+EXPOSE 8088
 
 # Start the development web server
-CMD caravel runserver -d
+CMD ["/caravel/start.sh"]
